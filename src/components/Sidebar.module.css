@@ -1,0 +1,33 @@
+.sidebar {
+  /* flex-basis: 56rem; */
+  background-color: #2d3439;
+  padding: 3rem 5rem 3.5rem 5rem;
+  width: 70%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  height: calc(100vh - 4.8rem);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.sidebar footer {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    /* flex-basis: 56rem; */
+    background-color: #2d3439;
+    padding: 3rem 5rem 3.5rem 5rem;
+    height: 20rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}

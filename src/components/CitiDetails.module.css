@@ -1,0 +1,29 @@
+.citydetails {
+  background-color: var(--color-dark--2);
+  width: 40rem;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+}
+
+.cityhead {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #adb5bd;
+}
+
+.citydetail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.emoji {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.cityname {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
