@@ -23,5 +23,8 @@ cd locationapp
 npm install
 npm run dev
 ```
+<<<<<<< HEAD
 
 # worldwise_APP
+=======
+>>>>>>> db43a69 (2025-08-01)

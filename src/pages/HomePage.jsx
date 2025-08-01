@@ -19,7 +19,11 @@ function HomePage() {
           you have wandered the world.
         </h2>
 
+<<<<<<< HEAD
         <Link to="/Applayout" className="cta">
+=======
+        <Link to="/Login" className="cta">
+>>>>>>> db43a69 (2025-08-01)
           Start tracking now
         </Link>
       </section>

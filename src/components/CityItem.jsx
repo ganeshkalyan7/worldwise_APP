@@ -11,10 +11,17 @@ export function convertToEmoji(countryCode) {
   return String.fromCodePoint(...codePoints);
 }
 
+<<<<<<< HEAD
 export default function CityItem({ city, deleteItem }) {
   const { cityName, date, emoji, id, position } = city;
 
   const { currentCitydata } = useContext(CityContext);
+=======
+export default function CityItem({ city }) {
+  const { cityName, date, emoji, id, position } = city;
+
+  const { currentCitydata, Deletecity } = useContext(CityContext);
+>>>>>>> db43a69 (2025-08-01)
   console.log(currentCitydata.id, id, cityName);
   const formateDate = (date) =>
     new Intl.DateTimeFormat("en", {
@@ -25,6 +32,14 @@ export default function CityItem({ city, deleteItem }) {
 
   console.log(formateDate(date));
 
+<<<<<<< HEAD
+=======
+  const handleDelete = (e) => {
+    e.preventDefault();
+    Deletecity(id);
+  };
+
+>>>>>>> db43a69 (2025-08-01)
   return (
     <div>
       <Link
@@ -36,7 +51,11 @@ export default function CityItem({ city, deleteItem }) {
         <p className={styles.cityName}>{cityName}</p>
         <p className={styles.emoji}>{emoji}</p>
         <p className={styles.date}>({formateDate(date)})</p>
+<<<<<<< HEAD
         <button className={styles.button} onClick={() => deleteItem(id)}>
+=======
+        <button className={styles.button} onClick={handleDelete}>
+>>>>>>> db43a69 (2025-08-01)
           &times;
         </button>
       </Link>
