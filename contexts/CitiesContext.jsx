@@ -1,32 +1,14 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-=======
-import { fa } from "@faker-js/faker";
-import { useState, useEffect, useReducer } from "react";
->>>>>>> db43a69 (2025-08-01)
-import { createContext } from "react";
+import React, { useState, useEffect, useReducer, createContext } from "react";
 
 export const CityContext = createContext();
 
-<<<<<<< HEAD
-function CitiesContext({ children }) {
-  const url = "http://localhost:9000/cities";
-  const [citiesdata, setCitiesdata] = useState([]);
-  const [isloading, setisloading] = useState(false);
-  const [currentCitydata, setcurrentCitydata] = useState({});
-  const [error, seterror] = useState("");
-
-  useEffect(() => {
-    const FetchData = async () => {
-      try {
-        setisloading(true);
-=======
 const initialstate = {
   citiesdata: [],
   isloading: "",
   currentCitydata: {},
   error: "",
 };
+
 function reducer(state, action) {
   switch (action.type) {
     case "stateloading":
@@ -53,7 +35,7 @@ function reducer(state, action) {
         ),
       };
     default:
-      throw new Error("unkown action type");
+      throw new Error("unknown action type");
   }
 }
 
@@ -66,67 +48,29 @@ function CitiesContext({ children }) {
     const FetchData = async () => {
       dispatch({ type: "stateloading" });
       try {
->>>>>>> db43a69 (2025-08-01)
         const resposne = await fetch(url);
         const data = await resposne.json();
-        if (!data.ok) {
-          console.log("error");
-        }
-<<<<<<< HEAD
-        setCitiesdata(data);
-        setisloading(false);
-      } catch (err) {
-        seterror("data couldn`t be  fetched 🤔");
-      } finally {
-        setisloading(false);
-=======
         dispatch({ type: "cities/dataload", payload: data });
       } catch (err) {
         dispatch({
           type: "errorcase",
-          payload: "here was an error loading cities...",
+          payload: "There was an error loading cities...",
         });
-        // seterror("");
->>>>>>> db43a69 (2025-08-01)
       }
     };
     FetchData();
   }, []);
 
   const CurrentCity = async (id) => {
-<<<<<<< HEAD
-    try {
-      setisloading(true);
-=======
     dispatch({ type: "stateloading" });
     try {
->>>>>>> db43a69 (2025-08-01)
       const resposne = await fetch(`${url}/${id}`);
       const data = await resposne.json();
-      if (!data.ok) {
-        console.log("error");
-      }
-<<<<<<< HEAD
-      setcurrentCitydata(data);
-      setisloading(false);
-    } catch (err) {
-      seterror("data couldn`t be  fetched 🤔");
-    } finally {
-      setisloading(false);
-    }
-  };
-
-  const deleteItem = (id) => {
-    setCitiesdata(citiesdata.filter((city) => city.id !== id));
-  };
-
-  console.log(citiesdata);
-=======
       dispatch({ type: "city/currentcity", payload: data });
     } catch (err) {
       dispatch({
         type: "errorcase",
-        payload: "here was an error loading city...",
+        payload: "There was an error loading the city...",
       });
     }
   };
@@ -142,7 +86,6 @@ function CitiesContext({ children }) {
         },
       });
       const data = await res.json();
-
       dispatch({ type: "city/created", payload: data });
     } catch {
       dispatch({
@@ -152,68 +95,35 @@ function CitiesContext({ children }) {
     }
   };
 
-  //   async function createCity(newCity) {
-  //   dispatch({ type: "loading" });
-
-  //   try {
-  //     const res = await fetch(`${url}`, {
-  //       method: "POST",
-  //       body: JSON.stringify(newCity),
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     });
-  //     const data = await res.json();
-
-  //     dispatch({ type: "city/created", payload: data });
-  //   } catch {
-  //     dispatch({
-  //       type: "errorcase",
-  //       payload: "There was an error creating the city...",
-  //     });
-  //   }
-  // }
-
   const Deletecity = async (id) => {
     dispatch({ type: "stateloading" });
     try {
       await fetch(`${url}/${id}`, {
         method: "DELETE",
       });
-      // const data = await resposne.json();
       dispatch({ type: "city/delete", payload: id });
     } catch (err) {
       dispatch({
         type: "errorcase",
-        payload: "here was an error  while deleting the city...",
+        payload: "There was an error while deleting the city...",
       });
     }
   };
 
->>>>>>> db43a69 (2025-08-01)
   return (
-    <div>
-      <CityContext.Provider
-        value={{
-          isloading,
-          citiesdata,
-<<<<<<< HEAD
-          deleteItem,
-          error,
-          currentCitydata,
-          CurrentCity,
-=======
-          Deletecity,
-          error,
-          currentCitydata,
-          CurrentCity,
-          Addnewcity,
->>>>>>> db43a69 (2025-08-01)
-        }}
-      >
-        {children}
-      </CityContext.Provider>
-    </div>
+    <CityContext.Provider
+      value={{
+        isloading,
+        citiesdata,
+        Deletecity,
+        error,
+        currentCitydata,
+        CurrentCity,
+        Addnewcity,
+      }}
+    >
+      {children}
+    </CityContext.Provider>
   );
 }
 

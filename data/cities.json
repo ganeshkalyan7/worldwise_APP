@@ -1,7 +1,6 @@
 {
   "cities": [
     {
-<<<<<<< HEAD
       "cityName": "Lisbon",
       "country": "Portugal",
       "emoji": "🇵🇹",
@@ -11,9 +10,8 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 73930385
+      "id": "73930385"
     },
-
     {
       "cityName": "Lisbon",
       "country": "Portugal",
@@ -24,7 +22,7 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 7393343385
+      "id": "7393343385"
     },
     {
       "cityName": "Madrid",
@@ -36,7 +34,7 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": 17806751
+      "id": "17806751"
     },
     {
       "cityName": "Berlin",
@@ -48,20 +46,7 @@
         "lat": 52.53586782505711,
         "lng": 13.376933665713324
       },
-      "id": 98443197
-    },
-
-    {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 983197
+      "id": "98443197"
     },
     {
       "cityName": "Nijar",
@@ -73,70 +58,7 @@
         "lat": "36.967508314568164",
         "lng": "-2.13128394200588"
       },
-      "id": 98443198
+      "id": "98443198"
     }
   ]
 }
-=======
-      "id": "d101",
-      "cityName": "Attur",
-      "country": "India",
-      "emoji": "IN",
-      "date": "2025-07-30T06:56:43.613Z",
-      "notes": "",
-      "position": {
-        "lat": "11.579597492622376",
-        "lng": "78.60341659569411"
-      }
-    },
-    {
-      "id": "9b0f",
-      "cityName": "Kannur",
-      "country": "India",
-      "emoji": "IN",
-      "date": "2025-07-30T07:11:19.663Z",
-      "notes": "",
-      "position": {
-        "lat": "11.872726613435072",
-        "lng": "75.38154168973902"
-      }
-    },
-    {
-      "id": "4d85",
-      "cityName": "Thanjavur",
-      "country": "India",
-      "emoji": "IN",
-      "date": "2025-07-30T10:54:20.966Z",
-      "notes": "it was a beatiful experiance in being there \n",
-      "position": {
-        "lat": "10.773952188496649",
-        "lng": "79.14421834372594"
-      }
-    },
-    {
-      "id": "31ca",
-      "cityName": "Burcombe",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "emoji": "GB",
-      "date": "2025-08-01T04:52:45.328Z",
-      "notes": "",
-      "position": {
-        "lat": "51.06901665960392",
-        "lng": "-1.89569650423729"
-      }
-    },
-    {
-      "id": "f59b",
-      "cityName": "Pala",
-      "country": "India",
-      "emoji": "IN",
-      "date": "2025-08-01T04:58:32.862Z",
-      "notes": "",
-      "position": {
-        "lat": "9.774024565864734",
-        "lng": "76.65546303206857"
-      }
-    }
-  ]
-}
->>>>>>> db43a69 (2025-08-01)

@@ -11,13 +11,8 @@ import {
 } from "react-leaflet";
 import { useContext, useEffect, useState } from "react";
 import { CityContext } from "../../contexts/CitiesContext";
-<<<<<<< HEAD
-import { useGeolocation } from "../Hooks/UseGeolocation";
-import { LanLatLocation } from "../Hooks/latlnglocationURL";
-=======
 import { useGeolocation } from "../Hooks/useGeolocation";
 import { useLanLatLocation } from "../Hooks/useLatlnglocationURL";
->>>>>>> db43a69 (2025-08-01)
 function Map() {
   const { citiesdata } = useContext(CityContext);
   const [mapPosition, setmapPosition] = useState([51.505, -0.09]);
@@ -25,11 +20,7 @@ function Map() {
 
   const navigation = useNavigate();
 
-<<<<<<< HEAD
-  const [lat, lng] = LanLatLocation();
-=======
   const [lat, lng] = useLanLatLocation();
->>>>>>> db43a69 (2025-08-01)
 
   useEffect(() => {
     if (lat && lng) setmapPosition([lat, lng]);
